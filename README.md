@@ -24,6 +24,5 @@ A coding sample of some Angular 4 components, models, services, and tests:
 Expanded Layout
 ![Screenshot of Time Filter Component](./time-filter-component.png)
 
-
-Responsive (collapsed) Layout
+Responsive (collapsed) Layout  
 ![Screenshot of Responsive Time Filter Component](./time-filter-component-responsive.png)
