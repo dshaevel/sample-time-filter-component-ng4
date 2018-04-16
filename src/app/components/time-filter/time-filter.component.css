@@ -1,0 +1,309 @@
+/* "skinning" the ngx-bootstrap dropdown used in the collapsed version */
+
+/* ===================== */
+/* BEGIN DROPDOWN STYLES */
+/* ===================== */
+div.gen-time-filter-responsive,
+div.gen-time-filter-collapsed,
+div.gen-time-filter-expanded {
+  height: 24px;
+}
+
+div.gen-time-filter-form {
+  height: 38px;
+}
+
+div.gen-time-filter-responsive ul.quick-select,
+div.gen-time-filter-collapsed ul.quick-select,
+div.gen-time-filter-expanded ul.quick-select {
+  max-height: 24px;
+}
+
+div.gen-time-filter-form ul.quick-select {
+  max-height: 38px;
+}
+
+.gen-time-filter-form ul.quick-select li.gen-datetime-picker-dropdown.d-dropdown {
+  font-size: 13.23px;
+}
+  
+div.btn-group.quick-list-collapsed {
+  display: block;
+  width: 70px;
+  text-align: center;
+  padding-left: 11px;
+  padding-right: 11px;
+}
+
+div.gen-time-filter-responsive div.btn-group.quick-list-collapsed,
+div.gen-time-filter-collapsed div.btn-group.quick-list-collapsed,
+div.gen-time-filter-expanded div.btn-group.quick-list-collapsed {
+  height: 22px !important;
+  font-size: 12px;
+}
+
+div.gen-time-filter-form div.btn-group.quick-list-collapsed {
+  height: 36px !important;
+  padding-top: 4px;
+  font-size: 13.23px;
+}
+
+div.btn-group.quick-list-collapsed ul.dropdown-menu {
+  min-width: 0;
+  left: auto;
+  cursor: pointer;
+}
+
+div.gen-time-filter-responsive div.btn-group.quick-list-collapsed ul.dropdown-menu,
+div.gen-time-filter-collapsed div.btn-group.quick-list-collapsed ul.dropdown-menu,
+div.gen-time-filter-expanded div.btn-group.quick-list-collapsed ul.dropdown-menu {
+  top: 22px;
+}
+
+div.gen-time-filter-form div.btn-group.quick-list-collapsed ul.dropdown-menu {
+  top: 42px;
+}
+
+.gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown:hover span.d-icon-calendar,
+.gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown.selected span.d-icon-calendar {
+  color: white !important;
+  font-weight: 600;
+}
+
+.gen-time-filter ul.quick-select li.quick-list-collapsed div.btn-group.quick-list-collapsed button.dropdown-toggle {
+  background-color: #fff;
+  color: #000;
+  font-weight: normal;
+}
+
+.gen-time-filter ul.quick-select li.quick-list-collapsed:hover div.btn-group.quick-list-collapsed button.dropdown-toggle {
+  background-color: #999;
+  color: white !important;
+  font-weight: 600;
+}
+
+.gen-time-filter ul.quick-select li.quick-list-collapsed.selected div.btn-group.quick-list-collapsed button.dropdown-toggle {
+  background-color: #f86e00;
+  color: white !important;
+  font-weight: 600;
+}
+
+div.gen-time-filter-responsive div.btn-group.quick-list-collapsed button.dropdown-toggle,
+div.gen-time-filter-collapsed div.btn-group.quick-list-collapsed button.dropdown-toggle,
+div.gen-time-filter-expanded div.btn-group.quick-list-collapsed button.dropdown-toggle {
+  font-size: 12px;
+}
+
+.gen-time-filter-responsive .gen-time-filter ul.quick-select li.quick-list-collapsed,
+.gen-time-filter-collapsed .gen-time-filter ul.quick-select li.quick-list-collapsed,
+.gen-time-filter-form .gen-time-filter ul.quick-select li.quick-list-collapsed {
+  margin-bottom: 2px;
+}
+
+.gen-time-filter-responsive .gen-time-filter ul.quick-select li.quick-list-collapsed > div.btn-group.quick-list-collapsed,
+.gen-time-filter-collapsed .gen-time-filter ul.quick-select li.quick-list-collapsed > div.btn-group.quick-list-collapsed {
+  position: absolute;
+  margin-top: 0;
+  margin-left: -22px;
+}
+
+.gen-time-filter-form .gen-time-filter ul.quick-select li.quick-list-collapsed > div.btn-group.quick-list-collapsed {
+  position: absolute;
+  margin-top: -4px;
+  margin-left: -22px;
+}
+
+.gen-time-filter-responsive .gen-time-filter ul.quick-select li.quick-list-collapsed > div.btn-group.quick-list-collapsed button.dropdown-toggle,
+.gen-time-filter-collapsed .gen-time-filter ul.quick-select li.quick-list-collapsed > div.btn-group.quick-list-collapsed button.dropdown-toggle {
+  width: 70px;
+  height: 22px;
+  padding: 1px 0 0 0;
+  border-radius: 0;
+}
+
+.gen-time-filter-form .gen-time-filter ul.quick-select li.quick-list-collapsed > div.btn-group.quick-list-collapsed button.dropdown-toggle {
+  width: 80px;
+  height: 36px;
+  padding: 0 0;
+  border-radius: 0;
+}
+
+.gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown {
+  width: 34px;
+  margin: 0 0 2px -3px;
+}
+
+.gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown > div.btn-group {
+  position: absolute;
+  margin-left: -5px;
+}
+
+.gen-time-filter-responsive .gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown > div.btn-group,
+.gen-time-filter-collapsed .gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown > div.btn-group,
+.gen-time-filter-expanded .gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown > div.btn-group {
+  margin-left: -17px;
+}
+
+.gen-time-filter-responsive .gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown > div.btn-group button.dropdown-toggle,
+.gen-time-filter-collapsed .gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown > div.btn-group button.dropdown-toggle,
+.gen-time-filter-expanded .gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown > div.btn-group button.dropdown-toggle {
+  width: 34px;
+  height: 22px;
+  padding: 1px 0 0 0;
+  border-radius: 0;
+  background-color: #FFF;
+}
+
+.gen-time-filter-responsive .gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown.selected > div.btn-group button.dropdown-toggle,
+.gen-time-filter-collapsed .gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown.selected > div.btn-group button.dropdown-toggle,
+.gen-time-filter-expanded .gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown.selected > div.btn-group button.dropdown-toggle,
+.gen-time-filter-responsive .gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown.selected:hover > div.btn-group button.dropdown-toggle,
+.gen-time-filter-collapsed .gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown.selected:hover > div.btn-group button.dropdown-toggle,
+.gen-time-filter-expanded .gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown.selected:hover > div.btn-group button.dropdown-toggle {
+  background-color: #f86e00;
+}
+
+.gen-time-filter-responsive .gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown:hover > div.btn-group button.dropdown-toggle,
+.gen-time-filter-collapsed .gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown:hover > div.btn-group button.dropdown-toggle,
+.gen-time-filter-expanded .gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown:hover > div.btn-group button.dropdown-toggle {
+  background-color: #999;
+}
+
+.gen-time-filter-form .gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown > div.btn-group {
+  margin-left: -17px;
+  margin-top: -4px;
+  padding-top: 4px;
+}
+
+.gen-time-filter-form .gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown > div.btn-group button.dropdown-toggle {
+  width: 34px;
+  height: 36px;
+  padding: 0;
+  border-radius: 0;
+  background-color: #FFF;
+}
+
+.gen-time-filter-form .gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown.selected > div.btn-group button.dropdown-toggle,
+.gen-time-filter-form .gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown.selected:hover > div.btn-group button.dropdown-toggle {
+  background-color: #f86e00;
+}
+
+.gen-time-filter-form .gen-time-filter ul.quick-select li.gen-datetime-picker-dropdown:hover > div.btn-group button.dropdown-toggle {
+  background-color: #999;
+}
+
+li.gen-datetime-picker-dropdown.d-dropdown.calendar div.dropdown-menu {
+  padding: 0;
+}
+
+.gen-time-filter-form li.gen-datetime-picker-dropdown.d-dropdown.calendar div.dropdown-menu {
+  margin-top: 4px;
+}
+/* =================== */
+/* END DROPDOWN STYLES */
+/* =================== */
+
+/* ======================= */
+/* BEGIN DATEPICKER STYLES */
+/* ======================= */
+div.gen-datetime-picker .d-datepicker {
+  border-top: none;
+  border-left: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+}
+
+div.gen-datetime-picker datepicker div.card {
+  min-height: 310px;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+}
+
+div.gen-datetime-picker datepicker daypicker table {
+  text-align: center;
+  margin: 0 20px 16px 20px;
+}
+
+div.gen-datetime-picker datepicker daypicker table thead:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  border-bottom: 1px solid #d9d9d9;
+  left: 0;
+}
+
+div.gen-datetime-picker datepicker daypicker table thead tr:nth-of-type(1) {
+  display: none;
+}
+
+div.gen-datetime-picker datepicker daypicker table thead tr:nth-of-type(2) th {
+  height: 50px;
+  padding: 0;
+  width: 14%;
+  text-align: center;
+  font-weight: 600;
+}
+
+div.gen-datetime-picker datepicker daypicker table thead tr:nth-of-type(2) th small {
+  font-size: 15px;
+}
+
+div.gen-datetime-picker datepicker daypicker table tbody:before {
+  content: "-";
+  display: block;
+  line-height: 18px;
+  color: transparent;
+}
+
+div.gen-datetime-picker datepicker daypicker table td button.btn.btn-sm.btn-default {
+  width: 36px;
+  height: 30px;
+  border: 0;
+  margin-top: 7px;
+  padding: 0;
+  font-size: 15px;
+}
+
+div.gen-datetime-picker datepicker daypicker table td button.btn.btn-sm.btn-default {
+  background: none;
+}
+
+div.gen-datetime-picker datepicker daypicker table td button.btn.btn-sm.btn-default:hover {
+  background: #f2f2f2;
+}
+
+div.gen-datetime-picker datepicker daypicker table td button.btn.btn-sm.btn-default.btn-info {
+  background: #F86E00;
+}
+
+div.gen-datetime-picker datepicker daypicker table td button.btn.btn-sm.btn-default.btn-info:hover {
+  background-color: #d75f00;
+}
+
+div.gen-datetime-picker datepicker daypicker table td button.btn.btn-sm.btn-default span.text-info {
+  color: #F86E00;
+}
+
+div.gen-datetime-picker datepicker daypicker table td button.btn.btn-sm.btn-default.btn-info span {
+  color: #FFF !important;
+}
+
+/* ===================== */
+/* END DATEPICKER STYLES */
+/* ===================== */
+
+/* ==================================== */
+/* BEGIN YEARPICKER, MONTHPICKER STYLES */
+/* ==================================== */
+.dp-year__title, .dp-month__title {
+  border-left: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+}
+/* ================================== */
+/* END YEARPICKER, MONTHPICKER STYLES */
+/* ================================== */
+
+a.previous-link, a.next-link {
+  text-decoration: none;
+}

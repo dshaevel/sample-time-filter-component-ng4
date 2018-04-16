@@ -1,0 +1,273 @@
+.time-filter-row {
+    padding-top: 8px;
+    padding-bottom: 9px;
+    margin-top: -2px;
+    border-bottom: 1px solid #d9d9d9;
+    background-color: #f2f2f2;
+}
+
+.gen-time-filter .quick-selection-list {
+    margin-right: 10px;
+}
+
+.gen-time-filter .quick-selection-list .d-icon-calendar {
+    color: #333;
+}
+
+.gen-time-filter ul.quick-select {
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    padding-left: 0;
+    margin-bottom: 0;
+    line-height: 24px;
+}
+
+.gen-time-filter-responsive .gen-time-filter ul.quick-select > li,
+.gen-time-filter-collapsed .gen-time-filter ul.quick-select > li,
+.gen-time-filter-expanded .gen-time-filter ul.quick-select > li {
+    height: 22px !important;
+}
+
+.gen-time-filter-form .gen-time-filter ul.quick-select > li {
+    height: 36px !important;
+}
+
+.gen-time-filter ul.quick-select > li {
+    display: inline-block;
+    zoom: 1;
+    text-align: center;
+    padding-left: 11px;
+    padding-right: 11px;
+    font-size: 12px;
+}
+
+.gen-time-filter ul.quick-select > li:hover {
+    background-color: #999999;
+    cursor: pointer;
+}
+
+.gen-time-filter ul.quick-select > li.selected {
+    background-color: #f86e00;
+    cursor: pointer;
+}
+
+.gen-time-filter ul.quick-select > li:hover > span,
+.gen-time-filter ul.quick-select > li.selected > span {
+    color: white !important;
+    font-weight: 600;
+}
+
+/** solution for inline elements shifting
+ ** http://stackoverflow.com/questions/556153/inline-elements-shifting-when-made-bold-on-hover
+ **/
+.gen-time-filter ul.quick-select > li.quick-list-expanded > span::after {
+    display: block;
+    content: attr(title);
+    font-weight: bold;
+    height: 0;
+    color: transparent;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.gen-time-filter ul.quick-select > li.calendar > span::after {
+    display: block;
+    content: attr(title);
+    font-weight: bold;
+    height: 0;
+    color: transparent;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.gen-time-filter ul.quick-select > li.quick-list-collapsed > span::after {
+    margin-left: 2px;
+}
+.gen-time-filter ul.quick-select > li.quick-list-collapsed > span {
+    display: block;
+    overflow: hidden;
+}
+
+.gen-time-filter ul.quick-select > li > span,
+.gen-time-filter ul.quick-select > li > a {
+    color: #333333 !important;
+    font-weight: 400;
+}
+
+.gen-time-filter .previous-link {
+    position: relative;
+    top: -2px; /* adjust because 28px font in 24px line */
+    font-size: 28px;
+    margin-right: 10px;
+    color: #f86e00;
+}
+
+.gen-time-filter .next-link {
+    position: relative;
+    top: -2px; /* adjust because 28px font in 24px line */
+    font-size: 28px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #f86e00;
+}
+
+.gen-time-filter .d-datepicker {
+    min-height: 222px;
+}
+
+.gen-time-filter .d-timepicker {
+    border: 1px solid #d9d9d9;
+    /*width: 205px;*/
+    /*padding-top: 10px;*/
+    /*padding-bottom: 10px;*/
+    border-top: 0;
+    padding-left: 70px;
+}
+
+/*.gen-time-filter .d-timepicker__unit_hours:after {*/
+/*top: 2px !important;*/
+/*}*/
+
+/*.gen-time-filter .d-timepicker__increase.d-icon-angle_up:before,*/
+/*.gen-time-filter .d-timepicker__decrease.d-icon-angle_down:before {*/
+/*vertical-align: 5px;*/
+/*}*/
+
+.gen-time-filter .gen-datetime-picker-dropdown.d-dropdown__list {
+    width: 440px;
+    display: table;
+    padding-top: 10px;
+}
+
+.gen-time-filter .time-filter-label {
+    line-height: 24px;
+}
+
+.gen-time-filter-form .gen-time-filter .time-filter-label {
+    margin-top: 6px;
+}
+
+.gen-time-filter .time-filter-label > span:first-child {
+    padding-left: 10px;
+}
+
+.gen-time-filter .gen-datetime-picker {
+    width: 210px;
+    height: 300px;
+    display: table-cell;
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+}
+
+.gen-time-filter .date-string {
+    position: relative;
+    top: -3px; /* adjust because 14px font in 24px line */
+    line-height: 26px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+    display: block;
+    padding-top: 2px;
+    text-align: center;
+    min-width: 310px;
+}
+
+/**
+ for the case where end date selection is disabled and text always set to present
+ */
+.gen-time-filter .date-string.end-date-disabled {
+    min-width: 200px !important;
+}
+
+/** collapsed version of timefilter **/
+
+.gen-time-filter ul.quick-select > li.quick-list-collapsed {
+    width: 70px;
+}
+
+.gen-time-filter-form .gen-time-filter ul.quick-select > li.quick-list-collapsed {
+    width: 80px;
+}
+
+.gen-time-filter ul.d-dropdown__list > li.d-dropdown__item {
+    width: 70px;
+    text-align: center;
+}
+
+.gen-time-filter-form .gen-time-filter ul.d-dropdown__list > li.d-dropdown__item {
+    width: 80px;
+}
+
+.gen-time-filter ul.d-dropdown__list > li.d-dropdown__item:hover {
+    background-color: #999999;
+    color: white;
+}
+
+.gen-time-filter ul.quick-select > li.quick-list-collapsed .d-dropdown__list {
+    min-width: 70px !important;
+    background-color: white;
+}
+
+.gen-time-filter ul.quick-select > li.quick-list-collapsed .d-dropdown__link {
+    padding: 0;
+    line-height: 24px;
+    text-align: center;
+}
+
+.gen-time-filter ul.quick-select > li.quick-list-collapsed .d-dropdown__link:hover,
+.gen-time-filter ul.quick-select > li.quick-list-collapsed .d-dropdown__link:focus {
+    background-color: #999999;
+    color: white;
+}
+
+/*undo*/
+
+.gen-time-filter .gen-timefilter-undo {
+    background-color: #f2f2f2;
+}
+
+/* collapsed */
+.gen-time-filter-collapsed .gen-time-filter ul.quick-select > li.quick-list-expanded,
+.gen-time-filter-form .gen-time-filter ul.quick-select > li.quick-list-expanded {
+    display: none;
+}
+
+.gen-time-filter-collapsed .gen-time-filter .gen-datetime-picker-dropdown > .d-dropdown__list,
+.gen-time-filter-form .gen-time-filter .gen-datetime-picker-dropdown > .d-dropdown__list {
+    left: 0 !important;
+}
+
+/* expanded */
+.gen-time-filter-expanded .gen-time-filter .gen-datetime-picker-dropdown > .d-dropdown__list {
+    right: 0 !important;
+    left: -403px !important;
+}
+
+.gen-time-filter-expanded .gen-time-filter ul.quick-select > li.quick-list-collapsed {
+    display: none;
+}
+
+/* media queries for responsive layout */
+
+@media (min-width: 1150px) {
+    .gen-time-filter-responsive .gen-time-filter .gen-datetime-picker-dropdown > .d-dropdown__list {
+        right: 0 !important;
+        left: -568px !important;
+    }
+
+    .gen-time-filter-responsive .gen-time-filter ul.quick-select > li.quick-list-collapsed {
+        display: none;
+    }
+}
+
+@media (max-width: 1150px) {
+    .gen-time-filter-responsive .gen-time-filter ul.quick-select > li.quick-list-expanded {
+        display: none;
+    }
+
+    .gen-time-filter-responsive .gen-time-filter .gen-datetime-picker-dropdown > .d-dropdown__list {
+        left: 0 !important;
+        right: -568px !important;
+    }
+}

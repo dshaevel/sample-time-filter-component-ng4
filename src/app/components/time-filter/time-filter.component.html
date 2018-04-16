@@ -1,0 +1,166 @@
+<div [ngClass]="{'gen-time-filter-responsive' : layout === RESPONSIVE,
+                 'gen-time-filter-collapsed' : layout === COLLAPSED,
+                 'gen-time-filter-expanded' : layout === EXPANDED,
+                 'gen-time-filter-form' : layout === FORM}"
+     *ngIf="!toggleTimeFilter"
+     class="nopadding">
+    <div class="gen-time-filter">
+        <div class="pull-left quick-selection-list">
+            <ul class="quick-select">
+
+                <!-- EXPANDED VERSION -->
+                <li *ngFor="let qts of quickTimeSelectionList; let idx = index;"
+                    id="{{ qts.label }}"
+                    [ngClass]="{'selected': selectedIndex === idx}"
+                    class="quick-list-expanded"
+                    (click)="quickSelectClickHandler(idx)">
+                    <span title="{{ qts.label | translate }}">{{ qts.label | translate }}</span>
+                </li>
+
+                <!-- COLLAPSED VERSION -->
+                <li [ngClass]="{'selected': selectedIndex !== -1}"
+                    class="quick-list-collapsed">
+                    <div class="btn-group quick-list-collapsed" dropdown>
+                        <button dropdownToggle type="button" class="btn dropdown-toggle">{{ selectedTab || 'Select' }}
+                            <span class="d-icon-right-angle_down"></span>
+                        </button>
+                        <ul *dropdownMenu class="dropdown-menu d-dropdown__list" role="menu">
+                            <li *ngFor="let qts of quickTimeSelectionList; let idx = index;"
+                                id="{{qts.label}}"
+                                class="d-dropdown__item"
+                                (click)="quickSelectClickHandler(idx)"
+                                role="menuitem">
+                                <span class="d-dropdown__link">{{ qts.label | translate }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- DATETIME PICKER TODO -- GOOD CANDIDATE TO BE A SEPARATE DIRECTIVE -->
+                <li [ngClass]="{'selected': selectedIndex === -1}"
+                    class="gen-datetime-picker-dropdown d-dropdown calendar">
+                    <div class="btn-group" dropdown>
+                        <button dropdownToggle type="button" class="btn dropdown-toggle" (click)="resetTimeFilter()">
+                            <span class="d-icon-calendar"></span>
+                        </button>
+                        <div *dropdownMenu class="dropdown-menu">
+                            <!-- START DATETIME PICKER -->
+                            <div class="gen-datetime-picker" (click)="$event.stopPropagation()">
+                                <!-- START YEAR PICKER -->
+                                <div class="dp-year__title" (click)="$event.stopPropagation()">
+                                    <button type="button" class="dp-prev" (click)="moveStartYear(-1)">
+                                        <span class="sr-only">previous year</span>
+                                    </button>
+                                    <strong style="font-size: 15px;">{{startYear}}</strong>
+                                    <button type="button" class="dp-next" (click)="moveStartYear(1)">
+                                        <span class="sr-only">next year</span>
+                                    </button>
+                                </div>
+                                <!-- START MONTH PICKER -->
+                                <div class="dp-month__title" (click)="$event.stopPropagation()">
+                                    <button type="button" class="dp-prev dp-prev--lg uib-left"
+                                            (click)="moveStartMonth(-1)">
+                                        <span class="sr-only">previous month</span>
+                                    </button>
+                                    <strong>{{startMonth}}</strong>
+                                    <button type="button" class="dp-next dp-next--lg uib-right"
+                                            (click)="moveStartMonth(1)">
+                                        <span class="sr-only">next month</span>
+                                    </button>
+                                </div>
+                                <!-- START DATE PICKER -->
+                                <div class="d-datepicker">
+                                    <datepicker class="start-datepicker"
+                                                (activeDateChange)="activeStartDateChange($event)"
+                                                (click)="$event.stopPropagation()"
+                                                [(ngModel)]="startDate"
+                                                [formatDay]="'D'"
+                                                [formatDayTitle]="'MMMM'"
+                                                [maxDate]="rightNow"
+                                                [onlyCurrentMonth]="true"
+                                                [showWeeks]="false"
+                                                [startingDay]="1">
+                                    </datepicker>
+                                </div>
+                                <!-- START TIME PICKER -->
+                                <div class="d-timepicker d-timepicker__no-label gen-timepicker"
+                                     (click)="$event.stopPropagation()">
+                                    <timepicker (click)="$event.stopPropagation()"
+                                                [(ngModel)]="timeFilterStart">
+                                    </timepicker>
+                                </div>
+                            </div>
+                            <!-- END DATETIME PICKER -->
+                            <div class="gen-datetime-picker" (click)="$event.stopPropagation()">
+                                <!-- END YEAR PICKER -->
+                                <div class="dp-year__title" (click)="$event.stopPropagation()">
+                                    <button type="button" class="dp-prev" (click)="moveEndYear(-1)">
+                                        <span class="sr-only">previous year</span>
+                                    </button>
+                                    <strong style="font-size: 15px;">{{endYear}}</strong>
+                                    <button type="button" class="dp-next" (click)="moveEndYear(1)">
+                                        <span class="sr-only">next year</span>
+                                    </button>
+                                </div>
+                                <!-- END MONTH PICKER -->
+                                <div class="dp-month__title" (click)="$event.stopPropagation()">
+                                    <button type="button" class="dp-prev dp-prev--lg uib-left"
+                                            (click)="moveEndMonth(-1)">
+                                        <span class="sr-only">previous month</span>
+                                    </button>
+                                    <strong>{{endMonth}}</strong>
+                                    <button type="button" class="dp-next dp-next--lg uib-right"
+                                            (click)="moveEndMonth(1)">
+                                        <span class="sr-only">next month</span>
+                                    </button>
+                                </div>
+                                <!-- END DATE PICKER -->
+                                <div class="d-datepicker">
+                                    <datepicker class="end-datepicker"
+                                                (activeDateChange)="activeEndDateChange($event)"
+                                                (click)="$event.stopPropagation()"
+                                                [(ngModel)]="endDate"
+                                                [formatDay]="'D'"
+                                                [formatDayTitle]="'MMMM'"
+                                                [maxDate]="endDateMax"
+                                                [onlyCurrentMonth]="true"
+                                                [showWeeks]="false"
+                                                [startingDay]="1">
+                                    </datepicker>
+                                </div>
+                                <!-- END TIME PICKER -->
+                                <div class="d-timepicker d-timepicker__no-label gen-timepicker"
+                                     (click)="$event.stopPropagation()">
+                                    <timepicker (click)="$event.stopPropagation()"
+                                                [(ngModel)]="timeFilterEnd">
+                                    </timepicker>
+                                </div>
+
+                                <div style="padding: 10px;" class="text-right">
+                                    <button (click)="applyCustomTimeRangeSelection()" class="btn btn-sm btn-primary">
+                                        {{"core.apply" | translate}}
+                                    </button>
+                                    <button (click)="cancel()" class="btn btn-sm btn-default">
+                                        {{"core.cancel" | translate}}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-filter-label pull-left">
+            <span (click)="previous()" class="pull-left">
+                <a class="d-icon-left-angle_left previous-link"></a>
+            </span>
+            <span class="date-string pull-left" [ngClass]="{'end-date-disabled': endDateDisabled}">
+                {{startDateTimeString}} - {{endDateDisabled ? 'present' : endDateTimeString}}</span>
+            <span (click)="next()" class="pull-left">
+                <a class="d-icon-right-angle_right next-link"></a>
+            </span>
+        </div>
+        <ts-toolbar-2 *ngIf="layout !== FORM" [actions]="toolbarActions"></ts-toolbar-2>
+    </div>
+</div>
